@@ -42,13 +42,13 @@
   --accent:#1F4FD0;       /* DAPI blue */
   --accent-ink:#FFFFFF;
   --c-market:#1F4FD0;
-  --c-partner:#0B9163;    /* FITC green */
-  --c-sales:#DC4F27;      /* Texas red */
-  --c-science:#B8226F;    /* Cy5 magenta */
-  --c-tools:#B87C00;      /* Cy3 amber */
+  --c-partner:#D9570A;    /* brand orange */
+  --c-sales:#0B84BE;      /* sky blue */
+  --c-science:#B07A00;    /* gold */
+  --c-tools:#4B6A88;      /* slate blue */
   --glow-1:rgba(36,87,214,.15);
-  --glow-2:rgba(14,159,110,.13);
-  --glow-3:rgba(194,39,127,.09);
+  --glow-2:rgba(232,102,12,.13);
+  --glow-3:rgba(11,132,190,.10);
   --node-a:.55;--link-a:.30;
   --font-display:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --font-body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
@@ -57,8 +57,8 @@
   :root:not([data-theme="light"]){
     --bg:#06121B;--panel:rgba(14,36,50,.80);--band:rgba(8,26,38,.55);--surface:#0F2331;--surface-2:#19384C;
     --ink:#EBF5F9;--ink-2:#B1C7D3;--line:#2B4F63;--accent:#7BA6FF;--accent-ink:#06121B;
-    --c-market:#7BA6FF;--c-partner:#3FE0A7;--c-sales:#FF946E;--c-science:#FF79BE;--c-tools:#FFC857;
-    --glow-1:rgba(70,125,255,.38);--glow-2:rgba(35,215,165,.24);--glow-3:rgba(255,95,175,.22);
+    --c-market:#7BA6FF;--c-partner:#FFA05A;--c-sales:#5CC8FF;--c-science:#FFD166;--c-tools:#A9BFD3;
+    --glow-1:rgba(70,125,255,.38);--glow-2:rgba(255,140,60,.26);--glow-3:rgba(92,200,255,.20);
     --node-a:.75;--link-a:.30;
     color-scheme:dark;
   }
@@ -66,8 +66,8 @@
 :root[data-theme="dark"]{
   --bg:#06121B;--panel:rgba(14,36,50,.80);--band:rgba(8,26,38,.55);--surface:#0F2331;--surface-2:#19384C;
   --ink:#EBF5F9;--ink-2:#B1C7D3;--line:#2B4F63;--accent:#7BA6FF;--accent-ink:#06121B;
-  --c-market:#7BA6FF;--c-partner:#3FE0A7;--c-sales:#FF946E;--c-science:#FF79BE;--c-tools:#FFC857;
-  --glow-1:rgba(70,125,255,.38);--glow-2:rgba(35,215,165,.24);--glow-3:rgba(255,95,175,.22);
+  --c-market:#7BA6FF;--c-partner:#FFA05A;--c-sales:#5CC8FF;--c-science:#FFD166;--c-tools:#A9BFD3;
+  --glow-1:rgba(70,125,255,.38);--glow-2:rgba(255,140,60,.26);--glow-3:rgba(92,200,255,.20);
   --node-a:.75;--link-a:.30;
   color-scheme:dark;
 }
@@ -260,7 +260,7 @@ section{padding-block:76px}
 }
 .step b{font-family:var(--font-display);font-size:18px;font-weight:700;line-height:1.2}
 .step:hover{border-color:var(--ink-2)}
-.step.done .n{background:var(--c-partner);border-color:var(--c-partner);color:#06281A}
+.step.done .n{background:var(--c-partner);border-color:var(--c-partner);color:#1A0C00}
 .step[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .step[aria-selected="true"] .n{border-color:currentColor;background:transparent;color:inherit}
 .story-panel{border:1px solid var(--line);border-radius:16px;background:var(--panel);padding:30px;display:grid;gap:18px;backdrop-filter:blur(8px)}
@@ -408,7 +408,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
 /* motion + new components */
 .nav a.lang{font-weight:700;border:1px solid var(--line);border-radius:999px;padding:6px 14px;margin-inline:4px}
 @media (max-width:480px){.nav a.lang{padding:5px 11px;margin-inline:2px;font-size:15px}#theme-label{display:none}.nav a{padding-inline:8px}}
-.progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:60;background:linear-gradient(90deg,var(--c-market),var(--c-partner),var(--c-sales));transform-origin:left;transform:scaleX(var(--p,0));pointer-events:none}
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;z-index:60;background:linear-gradient(90deg,var(--c-market),var(--c-partner));transform-origin:left;transform:scaleX(var(--p,0));pointer-events:none}
 @keyframes rise{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}
 .hero-grid>div:first-child>*{animation:rise .7s cubic-bezier(.2,.7,.2,1) backwards}
 .hero-grid>div:first-child>*:nth-child(2){animation-delay:.07s}.hero-grid>div:first-child>*:nth-child(3){animation-delay:.14s}
@@ -552,11 +552,11 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">The process</p>
-        <h2>From market opportunity to sales</h2>
-        <p>I discover opportunities in the market, find the gaps in a portfolio, and back them with market scans and data analysis. Then I qualify the suppliers who can fill those gaps and give the sales team a clear case. Select a step to see what happens and what each side gains.</p>
+        <h2>The market development and intelligence process</h2>
+        <p>I discover opportunities in the market, find the gaps in a portfolio, and back them with market scans, data analysis and business cases. Then I plan how to enter the market, with a supplier partner when one is needed, and give the sales team a clear case. Not every project needs every step. Select a step to see what happens and what each side gains.</p>
       </div>
       <div class="story">
-        <div class="steps" id="funnel" role="tablist" aria-label="Steps from market opportunity to sales"></div>
+        <div class="steps" id="funnel" role="tablist" aria-label="Steps of the market development and intelligence process"></div>
         <div class="story-panel" id="step-body" role="tabpanel" aria-live="polite"></div>
       </div>
     </div>
@@ -856,7 +856,7 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-betw
   });
 
   /* ---------- story: customer need to supplier onboarding ---------- */
-  var STEPS=[{"n": "Spot the opportunity", "sit": "A lab manager cannot find a reliable product for a test. A sales rep keeps hearing the same request. Nobody has written it down yet.", "do": "I track customer needs and trends across research, diagnostics, pharma, food and biotech, and look for opportunities in the market: applications, regions and niches nobody covers yet.", "adv": "Growth starts from real demand. The team works on needs customers actually have, not on guesses."}, {"n": "Find the portfolio gaps", "sit": "A customer need only becomes an opportunity if the current portfolio cannot serve it.", "do": "I segment the customers, compare what they need with what the portfolio offers, and mark the gaps in scientific applications.", "adv": "The company sees exactly where the portfolio falls short and which gaps matter most, instead of working from a hunch."}, {"n": "Scan the market", "sit": "A gap is only worth filling if the market is big enough and the competition can be beaten.", "do": "I run a structured scan for each application: competitors, pricing patterns, customer behaviour and demand. I have run 8+ scans. One became the Mindray partnership and the others are in progress.", "adv": "The company sees the size of the opportunity and the risks before spending time or budget. In one year, the opportunities I found, qualified and followed up in the Egyptian market led to more than $2M in sales closed by the sales team."}, {"n": "Turn data into decisions", "sit": "Data helps only when someone can read it and know what to do next.", "do": "I analyse the data behind each scan and turn it into clear visual reports, with recommended actions for the business.", "adv": "Decision-makers see the evidence in a form they can use, so the next step is a decision and not another discussion."}, {"n": "Qualify the suppliers", "sit": "Many suppliers make a good product. Few have real demand for it in this market. And suppliers are approached all the time.", "do": "I shortlist suppliers whose products fit the need, check customer demand across the target segments, and contact the ones that pass with the evidence: the need, the segments, the competitors and why their product fits.", "adv": "Only suppliers with real demand move forward, and they meet a partner who knows the market, which makes the partnership easier to start."}, {"n": "Onboard and hand over to sales", "sit": "A signed partner is only the start. A new line matters once it reaches customers.", "do": "When a supplier joins, as Mindray did for microbiology and urine analysis, I turn their science into clear value propositions for each customer type and build the go-to-market plan. I give sales qualified leads, segmentation and market intelligence, and follow the opportunities until they convert to sales.", "adv": "Sales starts with a clear story for each customer type, and every result feeds the next market scan."}];
+  var STEPS=[{"n": "Spot the opportunity", "sit": "A lab manager cannot find a reliable product for a test. A sales rep keeps hearing the same request. Nobody has written it down yet.", "do": "I track customer needs and trends across research, diagnostics, pharma, food and biotech, and look for opportunities in the market: applications, regions and niches nobody covers yet.", "adv": "Growth starts from real demand. The team works on needs customers actually have, not on guesses."}, {"n": "Find the portfolio gaps", "sit": "A customer need only becomes an opportunity if the current portfolio cannot serve it.", "do": "I segment the customers, compare what they need with what the portfolio offers, and mark the gaps in scientific applications.", "adv": "The company sees exactly where the portfolio falls short and which gaps matter most, instead of working from a hunch."}, {"n": "Scan the market", "sit": "A gap is only worth filling if the market is big enough and the competition can be beaten.", "do": "I run a structured scan for each application: competitors, pricing patterns, customer behaviour and demand. I have run 8+ scans. One became the Mindray partnership and the others are in progress.", "adv": "The company sees the size of the opportunity and the risks before spending time or budget. In one year, the opportunities I found, qualified and followed up in the Egyptian market led to more than $2M in sales closed by the sales team."}, {"n": "Assess the business case", "sit": "A gap worth filling still has to make business sense.", "do": "I size the opportunity, estimate the demand and revenue potential, and weigh the costs, risks and competition. Then I turn the data into clear visual reports with recommended actions.", "adv": "Leadership can say yes, no or not yet with the evidence in front of them, and the next step is a decision, not another discussion."}, {"n": "Plan market penetration", "sit": "Knowing a market is not the same as winning in it.", "do": "I choose the target segments and first customers, shape the value proposition for each, and plan where to start and how to position against competitors.", "adv": "Sales and marketing work from one entry plan instead of separate guesses."}, {"n": "Bring in the right partner", "sit": "Sometimes the best way to fill a gap is a supplier who already has the product. Many make a good product, but few have real demand for it in this market.", "do": "When a partner is the answer, I shortlist suppliers whose products fit the need, check customer demand in the target segments, and approach the ones that pass with the evidence: the need, the segments, the competitors and why their product fits. When one joins, as Mindray did for microbiology and urine analysis, I help onboard them.", "adv": "Only suppliers with real demand move forward, and they meet a partner who knows the market, which makes the partnership easier to start."}, {"n": "Hand over to sales and keep tracking", "sit": "A plan matters once it reaches customers.", "do": "I turn the science into clear value propositions for each customer type and give sales qualified leads, segmentation and market intelligence. I follow the opportunities until they convert to sales and track the results.", "adv": "Sales starts with a clear story for each customer type, and every result feeds the next market scan."}];
   var fn=$("#funnel"),cur=0;
   STEPS.forEach(function(s,i){
     var b=el("button",{class:"step",type:"button",role:"tab","aria-selected":"false","aria-label":"Step "+(i+1)+": "+s.n});
